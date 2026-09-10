@@ -1,107 +1,264 @@
-/* =================================
-   CSS Styles for Workshop 01
-   ================================= */
-
-/* TODO Task 2: Add your general styles here */
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
 /* Reset and Base Styles */
 * {
-    /* Add your reset styles here (margin, padding, box-sizing) */
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    /* Add body styles:  font-family, background-color, color, etc. */
-
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* TODO Task 2: Style your headings */
+/* Headings */
 h1 {
-    
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
-    
+    color: #1c094b;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #29d74c;
+    padding-bottom: 0.5rem;
 }
 
-/* TODO Task 2: Style your paragraphs */
+/* Paragraphs */
 p {
-    
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
-/* TODO Task 2: Style your images */
+/* Images */
 img {
-    
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #1c094b;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
-/* TODO Task 3: Navigation Styles */
+/* Navigation */
 nav {
-    
+    background-color: #1c094b;
+    padding: 1rem;
+    text-align: center;
 }
 
 nav ul {
-    /* Remove bullets and style the list */
+    list-style: none;
 }
 
 nav li {
-    /* Display items horizontally */
+    display: inline-block;
+    margin: 0 1rem;
 }
 
 nav a {
-    /* Style the links */
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    /* Add hover effect */
+    color: #29d74c;
+    text-decoration: underline;
 }
 
-/* Main Content Styles */
+/* Header */
+header {
+    background: linear-gradient(135deg, #3ca4e4 0%, #4dc1dc 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* Main Content */
 main {
-    
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 section {
-    /* Add spacing between sections */
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* TODO Task 4: Form Styles */
+/* About Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.about-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #1c094b;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+    color: #1c094b;
+    margin-bottom: 0.5rem;
+}
+
+.about-card p {
+    margin: 0;
+}
+
+/* Contact Form */
 form {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 label {
-    
+    font-weight: bold;
+    color: #251139;
 }
 
 input,
 textarea {
-    /* Style form inputs */
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 button,
 input[type="submit"] {
-    /* Style the submit button */
+    width: fit-content;
+    padding: 0.7rem 1.5rem;
+    background-color: #1c094b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 button:hover,
-input[type="submit"]: hover {
-    /* Add hover effect for button */
+input[type="submit"]:hover {
+    background-color: #29d74c;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }
 
-/* TODO Task 5: Media Queries for Responsive Design */
-/* Tablet styles (optional) */
+footer p {
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 0.8rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #29d74c;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Add your tablet/mobile styles here */
-    
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Mobile styles */
-@media (max-width:  480px) {
-    /* Add your mobile-specific styles here */
-    
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    nav a {
+        padding: 0.3rem 0.8rem;
+    }
 }
